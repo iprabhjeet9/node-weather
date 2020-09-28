@@ -50,8 +50,10 @@ app.get('/weather',(req,res)=>{
             })
         }else{
             res.send({
-                Temperature:data.temperature,
-                Forcast: data.weather_descriptions[0]
+                query: data.request.query,
+                temperature:data.current.temperature,
+                feelslike:data.current.feelslike,
+                description: data.current.weather_descriptions[0]
             })
         }
     })

@@ -8,7 +8,7 @@ const geoWeather =(Address,callback)=>{
         }else if(res.body.error){
             callback(res.body.error.info,undefined)
         }else{
-            callback(undefined,res.body.current)
+            callback(undefined,res.body)
         }
     })
 }

@@ -15,8 +15,9 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.Error) {
                 msgOne.textContent=data.Error
             } else {
-                msgOne.textContent='Temperature is : '+data.Temperature
-                msgSecond.textContent='Description : '+data.Forcast
+                msgOne.textContent='Showing result for '+data.query
+                msgSecond.textContent='Temperature is '+data.temperature+'°C, Feels like '+data.feelslike+'°C and\
+                 it is '+data.description+'.'
             }
         })
     })
